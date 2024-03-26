@@ -1,1 +1,1 @@
-select * from people
+select * from testdataset.people
