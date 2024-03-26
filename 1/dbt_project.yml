@@ -24,3 +24,7 @@ models:
       materialized: table
       staging:
         materialized: view
+  bigquery_sample:
+      materialized: table
+      staging:
+        materialized: view
