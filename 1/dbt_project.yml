@@ -1,12 +1,12 @@
-name: 'DBT_BigQuery_Sample'
+name: 'bigquery_sample'
 
 config-version: 2
 
-profile: 'my-bigquery-db'
+profile: 'bigquery_sample'
 model-paths: ["models"]
 
 models:
-  DBT_BigQuery_Sample:
+  bigquery_sample:
       materialized: table
       staging:
         materialized: table
