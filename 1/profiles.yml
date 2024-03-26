@@ -1,4 +1,4 @@
-my-bigquery-db:
+bigquery_sample:
   target: dev
   outputs:
     dev:
