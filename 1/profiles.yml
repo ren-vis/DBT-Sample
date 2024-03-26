@@ -1,17 +1,19 @@
-my-snowflake-db:
+my-bigquery-db:
   target: dev
   outputs:
     dev:
-      type: snowflake
-      account: "{{ env_var('snowflake_account') }}"
-      # User/password auth
-      user: "{{ env_var('snowflake_user') }}"
-      password: "{{ env_var('snowflake_password') }}"
+      type: bigquery
+      method: service-account-json
+      project: GCP_PROJECT_ID
+      dataset: DBT_DATASET_NAME
+      threads: 4 
+      OPTIONAL_CONFIG: VALUE
 
-      role: "{{ env_var('snowflake_role') }}"
-      database: "{{ env_var('snowflake_database') }}"
-      warehouse: "{{ env_var('snowflake_warehouse') }}"
-      schema: "{{ env_var('snowflake_schema') }}"
-      threads: 1
-      client_session_keep_alive: False
-      query_tag: "Test"
+      # These fields come from the service account json keyfile
+      keyfile_json:
+        project_id: "{{ env_var('snowflake_account') }}"
+        private_key: "{{ env_var('snowflake_account') }}"
+        client_email: "{{ env_var('snowflake_account') }}"
+        token_uri: "{{ env_var('snowflake_account') }}"
+
+
