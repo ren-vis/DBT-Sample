@@ -20,11 +20,7 @@ clean-targets:
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
-  bigquery_sample:
+  DBT_BigQuery_Sample:
       materialized: table
       staging:
-        materialized: view
-  bigquery_sample:
-      materialized: table
-      staging:
-        materialized: view
+        materialized: table
