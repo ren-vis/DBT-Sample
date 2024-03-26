@@ -1,1 +1,1 @@
-select * from testdata.organization
+select * from testdataset.organization
