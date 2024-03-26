@@ -1,0 +1,10 @@
+name: 'bigquery_sample'
+
+config-version: 2
+
+profile: 'bigquery_sample'
+model-paths: ["models"]
+
+models:
+  bigquery_sample:
+    materialized: table
