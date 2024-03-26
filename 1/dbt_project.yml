@@ -1,4 +1,4 @@
-name: 'DBT BigQuery Sample'
+name: 'DBT_BigQuery_Sample'
 
 config-version: 2
 version: '0.1'
