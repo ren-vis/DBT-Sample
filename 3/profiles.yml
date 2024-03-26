@@ -1,0 +1,19 @@
+bigquery_sample:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account-json
+      project: "{{ env_var('BIGQUERY_PROJECT') }}"
+      dataset: "{{ env_var('BIGQUERY_DATASET') }}"
+      threads: 4 
+      OPTIONAL_CONFIG: VALUE
+
+      # These fields come from the service account json keyfile
+      keyfile_json:
+        project_id: "{{ env_var('BIGQUERY_PROJECT') }}"
+        private_key: "{{ env_var('BIGQUERY_KEY') }}"
+        client_email: "{{ env_var('BIGQUERY_CLIENTEMAIL') }}"
+        token_uri: "{{ env_var('BIGQUERY_TOKENURI') }}"
+
+
