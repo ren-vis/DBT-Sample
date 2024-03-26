@@ -7,6 +7,3 @@ model-paths: ["models"]
 
 models:
   bigquery_sample:
-      materialized: table
-      staging:
-        materialized: table
